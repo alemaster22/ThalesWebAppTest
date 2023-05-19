@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    ViewData["Title"] = "Employees";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Employees</h1>       
+</div>
+<div>
+    <label for="txtId">ID:</label>
+    <input type="text" id="Id" onkeypress = "allowOnlyNumbers(event)"  />
+    <button id="btnBuscar" class="btn btn-primary" onclick="cargarDatatable(document.getElementById('Id').value)">Search by Id</button>
+  </div>
+<div class="container">
+    <table id="tblemployes"  class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>employee_name</th>
+                <th>employee_salary</th>
+                <th>employee_anual_salary</th>                
+                <th>employee_age</th>
+                <th>profile_image</th>
+            </tr>
+        </thead>        
+    </table>
+</div>
+
+@section Scripts{
+    <script src="~/js/employees.js"></script>    
+    
+ }
